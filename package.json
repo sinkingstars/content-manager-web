@@ -6,17 +6,33 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "admin-lte": "^3.0.5",
+    "babel-core": "^6.26.3",
+    "babel-plugin-react-html-attrs": "^3.0.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "firebase": "^7.21.1",
+    "font-awesome": "^4.7.0",
+    "ionicons": "^5.1.2",
+    "lodash": "^4.17.20",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-redux-toastr": "^7.6.5",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.5",
+    "redux-form": "^8.3.6",
+    "redux-multi": "^0.1.12",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server --open",
+    "dev": "nodemon --watch content-manager-web --ignore node_modules && webpack-dev-server --open",
+    "build": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +48,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "nodemon": "^2.0.4",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
