@@ -31,7 +31,6 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open",
-    "dev": "nodemon --watch content-manager-web --ignore node_modules && webpack-dev-server --open",
     "build": "webpack"
   },
   "eslintConfig": {
