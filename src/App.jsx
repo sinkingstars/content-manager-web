@@ -1,20 +1,26 @@
-import React from 'react';
-import Header from './components/Header/Header'
-import Menu from './components/Menu/Menu'
-import Content from './components/Content/Content'
-import Footer from './components/Footer/Footer'
-// import "./common/template/adminlte-dependencies"
+import React from "react";
+import Navbar from "./components/navbar/navbar.jsx";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//ROUTES
+import Personas from "./components/personas/table/personasTable";
+
+//CSS
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-
-    <div className="wrapper">
-    <Header/>
-    <Menu/>
-    <Content/>
-    <Footer/>
-    </div>
-   
+    <React.Fragment>
+      <Router>
+      <Navbar></Navbar>
+        <Switch>
+          <Route path="/personas">
+            <Personas />
+          </Route>
+        </Switch>
+      </Router>
+    </React.Fragment>
   );
 }
 
