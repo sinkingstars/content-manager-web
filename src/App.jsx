@@ -1,28 +1,31 @@
 import React, { Fragment } from "react";
 import Navbar from "./components/navbar/navbar.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {Container } from "react-bootstrap";
 
 //ROUTES
-import Personas from "./components/personas/table/personasTable";
-import Projetos from './components/personas/table/projetosTable'
+import PersonasTable from "./components/personas/table/personasTable";
+import PersonasCrud from "./components/personas/crud/personasCrud"
 
 //CSS
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
   return (
     <Fragment>
-      <Router>
-      <Navbar></Navbar>
-        <Switch>
-          <Route path="/personas">
-            <Personas />
-          </Route>
-          <Route path="/projetos">
-            <Projetos/>
-          </Route>
-        </Switch>
+      <Router>git 
+        <Navbar></Navbar>
+        <Container>
+          <Switch>
+            <Route path="/personastable">
+              <PersonasTable />
+            </Route>
+            <Route path="/personascrud">
+              <PersonasCrud />
+            </Route>
+          </Switch>
+        </Container>
       </Router>
     </Fragment>
   );
