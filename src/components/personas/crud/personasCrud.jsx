@@ -8,27 +8,24 @@ function PersonasCrud() {
     <Row>
       <Col>
         <Card className="mt-3">
-          <Row>
-            <Col>
-              <Card.Header as="h3">
+          <Card.Header as="h3">
+            <Row>
+              <Col>
                 <FontAwesomeIcon icon={faUser} className="mr-2" />
                 Persona - Novo
-              </Card.Header>
-            </Col>
-            <Col>
-              <Button className="float-right mt-2 mr-2">
-                <FontAwesomeIcon icon={faSave} className="mr-2" />
-                Salvar
-              </Button>
-              <Button variant="danger" className="float-right mt-2 mr-2">
-                <FontAwesomeIcon icon={faTrash} className="mr-2" />
-                Remover
-              </Button>
-            </Col>
-          </Row>
-        </Card>
-
-        <Card className="mt-3">
+              </Col>
+              <Col>
+                <Button className="float-right">
+                  <FontAwesomeIcon icon={faSave} className="mr-2" />
+                  Salvar
+                </Button>
+                <Button variant="danger" className="float-right mr-2">
+                  <FontAwesomeIcon icon={faTrash} className="mr-2" />
+                  Remover
+                </Button>
+              </Col>
+            </Row>
+          </Card.Header>
           <Card.Body>
             <Row>
               <Col>

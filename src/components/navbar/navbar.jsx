@@ -9,7 +9,9 @@ function Navbar() {
     <BootstrapNavbar bg="dark" variant="dark">
       <BootstrapNavbar.Brand href="#">Content Manager</BootstrapNavbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#">Dashboard</Nav.Link>
+        <Nav.Link href="#">
+          <Link to="/dashboard">Dashboard</Link>
+        </Nav.Link>
         <Nav.Link href="#">Projetos</Nav.Link>
         <Nav.Link>
           <Link to="/personastable">Personas</Link>

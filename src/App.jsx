@@ -5,7 +5,8 @@ import {Container } from "react-bootstrap";
 
 //ROUTES
 import PersonasTable from "./components/personas/table/personasTable";
-import PersonasCrud from "./components/personas/crud/personasCrud"
+import PersonasCrud from "./components/personas/crud/personasCrud";
+import Dashboard from "./components/dashboard/dashboard";
 
 //CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,6 +19,9 @@ function App() {
         <Navbar></Navbar>
         <Container>
           <Switch>
+          <Route path="/dashboard">
+              <Dashboard />
+            </Route>
             <Route path="/personastable">
               <PersonasTable />
             </Route>
