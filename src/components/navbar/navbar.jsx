@@ -12,7 +12,9 @@ function Navbar() {
         <Nav.Link href="#">
           <Link to="/dashboard">Dashboard</Link>
         </Nav.Link>
-        <Nav.Link href="/projetostable">Projetos</Nav.Link>
+        <Nav.Link>
+          <Link to="/projetostable">Projetos</Link>
+        </Nav.Link>
         <Nav.Link>
           <Link to="/personastable">Personas</Link>
         </Nav.Link>
