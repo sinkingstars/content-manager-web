@@ -1,29 +1,27 @@
 import React from "react";
 import { Col, Row, Card, Table, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserPlus, faUsers } from "@fortawesome/free-solid-svg-icons"
+import { faUserPlus, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 function PersonasTable() {
   return (
     <Row>
       <Col>
         <Card className="mt-3">
+        <Card.Header as="h3">
           <Row>
             <Col>
-              <Card.Header as="h3">
-                <FontAwesomeIcon icon={faUsers} className="mr-2"/>
-                Personas</Card.Header>
+                <FontAwesomeIcon icon={faUsers} className="mr-2" />
+                Personas
             </Col>
             <Col>
-              <Button className="float-right mt-2 mr-2">
-                <FontAwesomeIcon icon={faUserPlus} className="mr-2"/>
+              <Button className="float-right">
+                <FontAwesomeIcon icon={faUserPlus} className="mr-2" />
                 Nova persona
-                </Button>
+              </Button>
             </Col>
           </Row>
-        </Card>
-
-        <Card className="mt-3">
+          </Card.Header>
           <Card.Body>
             <Table striped bordered hover>
               <thead>
