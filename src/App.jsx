@@ -13,6 +13,7 @@ import BlogPosts from './components/personas/table/blogPost'
 import RedacaoTutorial from './components/personas/table/how-to-write-essay'
 import BlogPostCriar from './components/personas/table/blogPostsNovo'
 import NovoArtigo from './components/personas/table/novoArtigo'
+import NovoProjeto from './components/personas/table/novoProjeto'
 //CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -50,6 +51,9 @@ function App() {
             </Route>
             <Route path="/novo-artigo">
               <NovoArtigo />
+            </Route>
+            <Route path="/novo-projeto">
+              <NovoProjeto />
             </Route>
           </Switch>
         </Container>

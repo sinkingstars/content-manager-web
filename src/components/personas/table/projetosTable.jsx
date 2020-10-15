@@ -18,10 +18,11 @@ export default function ProjetosTable() {
                 Projetos
               </Col>
               <Col>
-                <Button className="float-right">
+              <Link to="/novo-projeto">
+              <Button className="float-right">
                   <FontAwesomeIcon icon={faPlus} className="mr-2" />
                   Novo projeto
-                </Button>
+                </Button></Link>
               </Col>
             </Row>
           </Card.Header>
