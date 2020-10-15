@@ -6,6 +6,10 @@ import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function BlogPosts() {
+
+    function navegar() {
+        return ""
+    }
   return (
     <Row>
       <Col>
@@ -17,10 +21,11 @@ export default function BlogPosts() {
                 Projetos
               </Col>
               <Col>
-                <Button className="float-right">
+              <Link to="novo-artigo">
+              <Button className="float-right">
                   <FontAwesomeIcon icon={faPlus} className="mr-2" />
-                  Novo projeto
-                </Button>
+                  Novo Artigo
+                </Button></Link>
               </Col>
             </Row>
           </Card.Header>
