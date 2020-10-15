@@ -9,7 +9,9 @@ import PersonasTable from "./components/personas/table/personasTable";
 import PersonasCrud from "./components/personas/crud/personasCrud";
 import ProjetosTable from "./components/personas/table/projetosTable"
 import Dashboard from "./components/dashboard/dashboard";
-
+import BlogPosts from './components/personas/table/blogPost'
+import RedacaoTutorial from './components/personas/table/how-to-write-essay'
+import BlogPostCriar from './components/personas/table/blogPostsNovo'
 //CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -35,6 +37,15 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/blog-posts">
+              <BlogPosts />
+            </Route>
+            <Route path="/how-to-write-assay">
+              <RedacaoTutorial />
+            </Route>
+            <Route path="/blog-post-criar">
+              <BlogPostCriar />
             </Route>
           </Switch>
         </Container>

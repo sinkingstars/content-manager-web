@@ -5,8 +5,7 @@ import { faPlus, faProjectDiagram } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-
-export default function ProjetosTable() {
+export default function BlogPosts() {
   return (
     <Row>
       <Col>
@@ -29,16 +28,18 @@ export default function ProjetosTable() {
             <Table striped bordered hover>
               <thead>
                 <tr>
-                  <th>Nome do Projeto</th>
-                  <th>Artigos</th>
-                  <th>Colaboradores</th>
+                  <th>Título</th>
+                  <th>Autor</th>
+                  <th>Criado em</th>
+                  <th>Publicado em </th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>
                     <Nav.Link>
-                      <Link to="/blog-posts">Blog Posts</Link>
+                      <Link to="/how-to-write-assay">Como escrever redação</Link>
                     </Nav.Link>
                   </td>
                   <td>40</td>
@@ -65,5 +66,5 @@ export default function ProjetosTable() {
         </Card>
       </Col>
     </Row>
-  );
+  );    
 }
