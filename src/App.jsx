@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {Container } from "react-bootstrap";
 
 //ROUTES
+import Login from "./view/login/login"
 import PersonasTable from "./components/personas/table/personasTable";
 import PersonasCrud from "./components/personas/crud/personasCrud";
 import ProjetosTable from "./components/personas/table/projetosTable"
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route path="/personascrud">
               <PersonasCrud />
+            </Route>
+            <Route path="/login">
+              <Login />
             </Route>
           </Switch>
         </Container>

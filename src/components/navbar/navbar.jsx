@@ -18,6 +18,9 @@ function Navbar() {
         <Nav.Link>
           <Link to="/personastable">Personas</Link>
         </Nav.Link>
+        <Nav.Link>
+          <Link to="/login">Login</Link>
+        </Nav.Link>
       </Nav>
       <Button variant="dark">
         <FontAwesomeIcon icon={faSignOutAlt} className="mr-2" />
