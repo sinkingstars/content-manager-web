@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Software para controle e produção de artigos 
+O Content Manager é um sistema que ajuda o time de marketing a controlar e centralizar o processo de produção de conteúdo em um só lugar. Atua as áreas de planejamento, gerenciamento, colaboração, revisão e publicação dos conteúdos".
 
 Projeto desenvolvido pelos alunos Pablo Cavalcante, Júlio Sousa, Hallefy e Túlio Alcântara para a disciplina 
 Construção de Software ofertada pela Universidade Federal de Goiás e ministrada pelo professor Walison Moreira.
