@@ -1,19 +1,25 @@
 import React, { Fragment } from "react";
 import Navbar from "./components/navbar/navbar.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 //ROUTES
-import Login from "./view/login/login"
+import Login from "./components/login/login";
+
+//PERSONAS
 import PersonasTable from "./components/personas/table/personasTable";
 import PersonasCrud from "./components/personas/crud/personasCrud";
-import ProjetosTable from "./components/personas/table/projetosTable"
+
+//PROJETOS
+import ProjetosTable from "./components/projetos/table/projetosTable";
+import ProjetosCrud from "./components/projetos/crud/projetosCrud";
+
+//DASHBOARD
 import Dashboard from "./components/dashboard/dashboard";
-import BlogPosts from './components/personas/table/blogPost'
-import RedacaoTutorial from './components/personas/table/how-to-write-essay'
-import BlogPostCriar from './components/personas/table/blogPostsNovo'
-import NovoArtigo from './components/personas/table/novoArtigo'
-import NovoProjeto from './components/personas/table/novoProjeto'
+
+import ArtigosTable from "./components/artigos/table/artigosTable";
+import ArtigosCrud from "./components/artigos/crud/artigosCrud";
+
 //CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -25,35 +31,33 @@ function App() {
         <Navbar></Navbar>
         <Container>
           <Switch>
-          <Route path="/dashboard">
+            <Route path="/dashboard">
               <Dashboard />
             </Route>
-            <Route path="/personastable">
+
+            <Route path="/personas-table">
               <PersonasTable />
             </Route>
-            <Route path="/projetostable">
-              <ProjetosTable/>
-            </Route>
-            <Route path="/personascrud">
+            <Route path="/personas-crud">
               <PersonasCrud />
             </Route>
+
+            <Route path="/projetos-table">
+              <ProjetosTable />
+            </Route>
+            <Route path="/projetos-crud">
+              <ProjetosCrud />
+            </Route>
+
+            <Route path="/artigos-table">
+              <ArtigosTable />
+            </Route>
+            <Route path="/artigos-crud">
+              <ArtigosCrud />
+            </Route>
+
             <Route path="/login">
               <Login />
-            </Route>
-            <Route path="/blog-posts">
-              <BlogPosts />
-            </Route>
-            <Route path="/how-to-write-assay">
-              <RedacaoTutorial />
-            </Route>
-            <Route path="/blog-post-criar">
-              <BlogPostCriar />
-            </Route>
-            <Route path="/novo-artigo">
-              <NovoArtigo />
-            </Route>
-            <Route path="/novo-projeto">
-              <NovoProjeto />
             </Route>
           </Switch>
         </Container>

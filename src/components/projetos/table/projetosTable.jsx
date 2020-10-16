@@ -2,9 +2,7 @@ import React from "react";
 import { Col, Row, Card, Table, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faProjectDiagram } from "@fortawesome/free-solid-svg-icons";
-import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 
 export default function ProjetosTable() {
   return (
@@ -18,11 +16,12 @@ export default function ProjetosTable() {
                 Projetos
               </Col>
               <Col>
-              <Link to="/novo-projeto">
-              <Button className="float-right">
-                  <FontAwesomeIcon icon={faPlus} className="mr-2" />
-                  Novo projeto
-                </Button></Link>
+                <Link to="/projetos-crud">
+                  <Button className="float-right">
+                    <FontAwesomeIcon icon={faPlus} className="mr-2" />
+                    Novo projeto
+                  </Button>
+                </Link>
               </Col>
             </Row>
           </Card.Header>
@@ -38,9 +37,7 @@ export default function ProjetosTable() {
               <tbody>
                 <tr>
                   <td>
-                    <Nav.Link>
-                      <Link to="/blog-posts">Blog Posts</Link>
-                    </Nav.Link>
+                      <Link to="/artigos-table">Blog Posts</Link>
                   </td>
                   <td>40</td>
                   <td>3</td>

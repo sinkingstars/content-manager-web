@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Card, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChartLine,
@@ -24,14 +25,13 @@ function Dashboard() {
             <Card.Body>
               {/* FILTROS */}
               <Row>
-                <Col>
+                <Col sm="12">
                   <Form.Group controlId="projeto">
                     <Form.Label>1. Escolha o projeto</Form.Label>
                     <Form.Control as="select" />
                   </Form.Group>
                 </Col>
-              </Row>
-              <Row>
+                {/* TODO: Adicionar idioma pt-br para o datepicker */}
                 <Col sm="6">
                   <Form.Group controlId="dataInicio">
                     <Form.Label>2. Escolha o período inicial</Form.Label>
@@ -100,13 +100,13 @@ function Dashboard() {
               <Col>
                 <ul>
                   <li>
-                    <a href="#">Artigo 1</a>
+                    <Link to="/">Artigo 1</Link>
                   </li>
                   <li>
-                    <a href="#">Artigo 2</a>
+                    <Link to="/">Artigo 2</Link>
                   </li>
                   <li>
-                    <a href="#">Artigo 3</a>
+                    <Link to="/">Artigo 3</Link>
                   </li>
                 </ul>
               </Col>
