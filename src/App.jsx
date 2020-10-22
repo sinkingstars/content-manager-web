@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import Navbar from "./components/navbar/navbar.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import store from '../src/store/'
+import { Provider } from 'react-redux'
 
 //ROUTES
 import Login from "./components/login/login";
@@ -26,43 +28,45 @@ import "./App.css";
 
 function App() {
   return (
+    <Provider store={store}>
     <Fragment>
       <Router>
         <Navbar></Navbar>
         <Container>
           <Switch>
-            <Route path="/dashboard">
+            <Route exact path="/dashboard">
               <Dashboard />
             </Route>
 
-            <Route path="/personas-table">
+            <Route exact path="/personas-table">
               <PersonasTable />
             </Route>
-            <Route path="/personas-crud">
+            <Route exact path="/personas-crud">
               <PersonasCrud />
             </Route>
 
-            <Route path="/projetos-table">
+            <Route exact path="/projetos-table">
               <ProjetosTable />
             </Route>
             <Route path="/projetos-crud">
               <ProjetosCrud />
             </Route>
 
-            <Route path="/artigos-table">
+            <Route exact path="/artigos-table">
               <ArtigosTable />
             </Route>
-            <Route path="/artigos-crud">
+            <Route exact path="/artigos-crud">
               <ArtigosCrud />
             </Route>
 
-            <Route path="/login">
+            <Route exact path="/login">
               <Login />
             </Route>
           </Switch>
         </Container>
       </Router>
     </Fragment>
+    </Provider>
   );
 }
 
