@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import {  useSelector } from 'react-redux';
 import { Form, Row, Col, Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,11 +9,32 @@ import {
   faCalendar
 } from "@fortawesome/free-solid-svg-icons";
 import DatePicker from "react-datepicker";
+import firebase from '../../../config/firebase'
 
 //CSS
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function ArtigosCrud() {
+
+  const [titulo, setTitulo] = useState()
+  const [status, setStatus] = useState()
+  const [briefing, setBriefing] = useState()
+  const [texto, setTexto] = useState()
+
+  const db = firebase.firestore()
+
+  function criar() {
+    db.collection('artigos').add({
+      titulo: titulo,
+      statu: status,
+      briefing: briefing,
+      texto: briefing,
+      criacao: new Date()
+
+    }).then(() => {
+    })
+  }
+
   return (
     <Row>
       <Col>
@@ -24,7 +46,7 @@ export default function ArtigosCrud() {
                 Artigo - Novo
               </Col>
               <Col sm="4">
-                <Button className="float-right">
+                <Button onClick={criar} className="float-right">
                   <FontAwesomeIcon icon={faSave} className="mr-2" />
                   Salvar
                 </Button>

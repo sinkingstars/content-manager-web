@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import Navbar from "./components/navbar/navbar.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import store from '../src/store/'
-import { Provider } from 'react-redux'
+import store from "../src/store/";
+import { Provider } from "react-redux";
 
 //ROUTES
 import Login from "./components/login/login";
@@ -29,43 +29,41 @@ import "./App.css";
 function App() {
   return (
     <Provider store={store}>
-    <Fragment>
-      <Router>
-        <Navbar></Navbar>
-        <Container>
-          <Switch>
-            <Route exact path="/dashboard">
-              <Dashboard />
-            </Route>
+      <Fragment>
+        <Router>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Container>
+            <Switch>
+              <Route exact path="/dashboard">
+                <Dashboard />
+              </Route>
 
-            <Route exact path="/personas-table">
-              <PersonasTable />
-            </Route>
-            <Route exact path="/personas-crud">
-              <PersonasCrud />
-            </Route>
+              <Route exact path="/personas-table">
+                <PersonasTable />
+              </Route>
+              <Route exact path="/personas-crud">
+                <PersonasCrud />
+              </Route>
 
-            <Route exact path="/projetos-table">
-              <ProjetosTable />
-            </Route>
-            <Route path="/projetos-crud">
-              <ProjetosCrud />
-            </Route>
+              <Route exact path="/projetos-table">
+                <ProjetosTable />
+              </Route>
+              <Route path="/projetos-crud">
+                <ProjetosCrud />
+              </Route>
 
-            <Route exact path="/artigos-table">
-              <ArtigosTable />
-            </Route>
-            <Route exact path="/artigos-crud">
-              <ArtigosCrud />
-            </Route>
-
-            <Route exact path="/login">
-              <Login />
-            </Route>
-          </Switch>
-        </Container>
-      </Router>
-    </Fragment>
+              <Route exact path="/artigos-table">
+                <ArtigosTable />
+              </Route>
+              <Route exact path="/artigos-crud">
+                <ArtigosCrud />
+              </Route>
+            </Switch>
+          </Container>
+        </Router>
+      </Fragment>
     </Provider>
   );
 }
