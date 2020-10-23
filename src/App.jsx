@@ -25,6 +25,7 @@ import ArtigosCrud from "./components/artigos/crud/artigosCrud";
 //CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import NovoUsuario from "./components/novo-usuario/novo-usuario.jsx";
 
 function App() {
   return (
@@ -59,6 +60,10 @@ function App() {
               </Route>
               <Route exact path="/artigos-crud">
                 <ArtigosCrud />
+              </Route>
+
+              <Route exact path="/cadastro">
+                <NovoUsuario />
               </Route>
             </Switch>
           </Container>
